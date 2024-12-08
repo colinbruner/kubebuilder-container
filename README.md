@@ -19,4 +19,9 @@ $ go get sigs.k8s.io/controller-runtime@v0.19.1
 ...
 ```
 
+## Contributing
+Please feel free to submit PRs updating Dockerfile or adding additional versions to actions matrix. 
+
+This was quickly done for those who can pull and run containers at work but getting direct access to a new software binary is months of paperwork.
+
 [kb]: https://github.com/kubernetes-sigs/kubebuilder
