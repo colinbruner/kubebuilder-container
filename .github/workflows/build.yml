@@ -35,8 +35,8 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          build-args:
-            - "VERSION=${{ matrix.version }}"
-            - "TARGETOS=${{ matrix.targetos }}"
+          build-args: |
+            VERSION=${{ matrix.version }}
+            TARGETOS=${{ matrix.targetos }}
           # e.g. kubebuilder:v4.3.1-linux
           tags: "${{ secrets.DOCKER_USERNAME }}/kubebuilder:${{ matrix.version }}-linux-${{ matrix.targetos }}"
