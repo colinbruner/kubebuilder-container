@@ -11,7 +11,7 @@ ARG TARGETOS=${TARGETOS:-arm64}
 ARG URL="https://github.com/kubernetes-sigs/kubebuilder/releases/download/${VERSION}/kubebuilder_${PLATFORM}_${TARGETOS}"
 
 # Download Kubebuilder
-RUN curl -o /usr/local/bin/kubebuilder -L $URL && echo ${TARGETOS} && \
+RUN curl -o /usr/local/bin/kubebuilder -L $URL && \
       chmod +x /usr/local/bin/kubebuilder
 
 # User
