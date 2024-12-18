@@ -15,7 +15,7 @@ jobs:
       id-token: write
     strategy:
       matrix:
-        platform: ["linux"]
+        targetos: ["arm64", "amd64"]
         version: ["v4.3.1"]
     steps:
       - name: Clone the code
@@ -35,4 +35,4 @@ jobs:
           file: ./Dockerfile
           push: true
           # e.g. kubebuilder:v4.3.1-linux
-          tags: "${{ secrets.DOCKER_USERNAME }}/kubebuilder:${{ matrix.version }}-${{ matrix.platform }}"
+          tags: "${{ secrets.DOCKER_USERNAME }}/kubebuilder:${{ matrix.version }}-linux-${{ matrix.targetos }}"
